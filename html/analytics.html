@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotions</title>
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/analytics.css">
+</head>
+<body>
+<nav>
+    <div class="left">
+        <p onclick="location.href='welcome.html'">GopherDen</p>
+    </div>
+    <div class="right">
+        <a href="../html/welcome.html">Home</a>
+        <a href="../html/browse.html">Browse</a>
+        <a href="../html/about.html">About</a>
+        <a href="../html/umnspaces.html">UMN Spaces</a>
+        <img src="/img/profile.png" alt="profile" onclick="location.href='profile.html'">
+    </div>
+</nav>
+<main>
+    <h1>Weekly Emotions Analytics</h1>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th><img class="emojis" src="/img/emotions/super-sad.png" alt="super-sad"></th>
+                <th><img class="emojis" src="/img/emotions/sad.png" alt="Sad"></th>
+                <th><img class="emojis" src="/img/emotions/ok.png" alt="ok"></th>
+                <th><img class="emojis" src="/img/emotions/happy.png" alt="happy"></th>
+                <th><img class="emojis" src="/img/emotions/super-happy.png" alt="super-happy"></th>
+            </tr>
+        </thead>
+        <tbody>
+        <!-- Repeat for each day -->
+        <tr>
+            <td>Monday</td>
+            <td><input type="radio" name="monday" checked/></td>
+            <td><input type="radio" name="monday" /></td>
+            <td><input type="radio" name="monday" /></td>
+            <td><input type="radio" name="monday" /></td>
+            <td><input type="radio" name="monday" /></td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td><input type="radio" name="tuesday" /></td>
+            <td><input type="radio" name="tuesday" checked/></td>
+            <td><input type="radio" name="tuesday" /></td>
+            <td><input type="radio" name="tuesday" /></td>
+            <td><input type="radio" name="tuesday" /></td>
+        </tr>
+        <!-- Repeat for Wednesday–Sunday -->
+        <tr><td>Wednesday</td>
+            <td><input type="radio" name="wednesday" /></td>
+            <td><input type="radio" name="wednesday" /></td>
+            <td><input type="radio" name="wednesday" checked/></td>
+            <td><input type="radio" name="wednesday" /></td>
+            <td><input type="radio" name="wednesday" /></td>
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <td><input type="radio" name="tuesday" /></td>
+            <td><input type="radio" name="tuesday" /></td>
+            <td><input type="radio" name="tuesday" /></td>
+            <td><input type="radio" name="tuesday" /></td>
+            <td><input type="radio" name="tuesday" /></td>
+        </tr>
+        <tr><td>Friday</td>
+            <td><input type="radio" name="tuesday" /></td>
+            <td><input type="radio" name="tuesday" /></td>
+            <td><input type="radio" name="tuesday" /></td>
+            <td><input type="radio" name="tuesday" /></td>
+            <td><input type="radio" name="tuesday" /></td>
+        </tr>
+        <tr>
+            <td>Saturday</td>
+            <td><input type="radio" name="tuesday" /></td>
+            <td><input type="radio" name="tuesday" /></td>
+            <td><input type="radio" name="tuesday" /></td>
+            <td><input type="radio" name="tuesday" /></td>
+            <td><input type="radio" name="tuesday" /></td>
+        <tr>
+        <tr>
+            <td>Saturday</td>
+            <td><input type="radio" name="tuesday" /></td>
+            <td><input type="radio" name="tuesday" /></td>
+            <td><input type="radio" name="tuesday" /></td>
+            <td><input type="radio" name="tuesday" /></td>
+            <td><input type="radio" name="tuesday" /></td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+<div id="rock-bubble">
+    <img id="persistent-rock" alt="Your rock" />
+    <div class="talk-bubble tri-right round btm-left-in">
+        <div class="text">
+        </div>
+    </div>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const rockImg = localStorage.getItem("selectedRock");
+            if (rockImg) {
+                const rockDisplay = document.getElementById("persistent-rock");
+                rockDisplay.src = rockImg;
+            }
+        });
+    </script>
+    <script src="/js/welcome.js"></script>
+</body>
+</html>

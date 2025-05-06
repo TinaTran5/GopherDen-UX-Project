@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse</title>
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/browse.css">
+</head>
+<body>
+<nav>
+    <div class="left">
+        <p onclick="location.href='welcome.html'">GopherDen</p>
+    </div>
+    <div class="right">
+        <a href="../html/welcome.html">Home</a>
+        <a href="../html/browse.html">Browse</a>
+        <a href="../html/about.html">About</a>
+        <a href="../html/umnspaces.html">UMN Spaces</a>
+        <img src="/img/profile.png" alt="profile" onclick="location.href='profile.html'">
+    </div>
+</nav>
+<div class="search-filter">
+  <div class="search-bar">
+    <input type="text" placeholder="Search videos..." id="searchInput">
+    <button type="button" onclick="performSearch()">🔍</button>
+  </div>
+  <div class="tag-buttons" id="tagButtons">
+    <button data-tag="all" class="tag-btn active">All</button>
+    <button data-tag="Jazz" class="tag-btn">Jazz</button>
+    <button data-tag="Nature" class="tag-btn">Nature</button>
+    <button data-tag="Rain" class="tag-btn">Rain</button>
+    <button data-tag="Fireplace" class="tag-btn">Fireplace</button>
+    <button data-tag="Piano" class="tag-btn">Piano</button>
+    <button data-tag="Cafe" class="tag-btn">Cafe</button>
+    <button data-tag="Christmas" class="tag-btn">Christmas</button>
+    <button data-tag="Stars" class="tag-btn">Stars</button>
+    <button data-tag="Night" class="tag-btn">Night</button>
+    <button data-tag="Spring" class="tag-btn">Spring</button>
+    <button data-tag="Fall" class="tag-btn">Fall</button>
+    <button data-tag="Summer" class="tag-btn">Summer</button>
+  </div>
+</div>
+
+<section class="container">
+  <section class="recommended">
+    <h2>Recommended</h2>
+    <div class="video-grid">
+
+      <div class="video-card">
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/_qoh9g29ib8?si=hTfTF__DefKEOrmX" title="Summer Beach Jazz" allowfullscreen></iframe>
+          <div class="video-description">
+            <p>Relaxing summer beach vibes with smooth jazz. Ideal for mellow afternoons or calming study sessions.</p>
+            <div class="tags">
+              <span>#Summer</span>
+              <span>#Beach</span>
+              <span>#Jazz</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/g2Ytq8atf70?si=xaRSm96X_3GWUe-9" title="Halloween Rain Fireplace" allowfullscreen></iframe>
+          <div class="video-description">
+            <p>Spooky yet cozy Halloween ambiance with rain and fireplace sounds. Perfect for chilly nights or themed focus time.</p>
+            <div class="tags">
+              <span>#Halloween</span>
+              <span>#Rain</span>
+              <span>#Fireplace</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/oWWO0fq7w6w?si=-sshqEIh4kc0yqKk" title="Spring Nature at Night" allowfullscreen></iframe>
+          <div class="video-description">
+            <p>Peaceful spring blossoms swaying under a starry night sky. Perfect for winding down, dreaming, or quiet reflection.</p>
+            <div class="tags">
+              <span>#Nature</span>
+              <span>#Spring</span>
+              <span>#Night</span>
+              <span>#Stars</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!--  BROWSE -->
+  <section class="browse">
+    <h2>Browse</h2>
+    <div class="video-grid">
+
+      <div class="video-card">
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/_qoh9g29ib8?si=hTfTF__DefKEOrmX" title="Summer Beach Jazz" allowfullscreen></iframe>
+          <div class="video-description">
+            <p>Relaxing summer beach vibes with smooth jazz. Ideal for mellow afternoons or calming study sessions.</p>
+            <div class="tags">
+              <span>#Summer</span>
+              <span>#Beach</span>
+              <span>#Jazz</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/g2Ytq8atf70?si=xaRSm96X_3GWUe-9" title="Halloween Rain Fireplace" allowfullscreen></iframe>
+          <div class="video-description">
+            <p>Spooky yet cozy Halloween ambiance with rain and fireplace sounds. Perfect for chilly nights or themed focus time.</p>
+            <div class="tags">
+              <span>#Halloween</span>
+              <span>#Rain</span>
+              <span>#Fireplace</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/oWWO0fq7w6w?si=-sshqEIh4kc0yqKk" title="Spring Nature at Night" allowfullscreen></iframe>
+          <div class="video-description">
+            <p>Peaceful spring blossoms swaying under a starry night sky. Perfect for winding down, dreaming, or quiet reflection.</p>
+            <div class="tags">
+              <span>#Nature</span>
+              <span>#Spring</span>
+              <span>#Night</span>
+              <span>#Stars</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</section>
+<script>
+  function filterByTag(tag) {
+    const videoCards = document.querySelectorAll(".video-card");
+
+    videoCards.forEach(card => {
+      const tags = Array.from(card.querySelectorAll(".tags span")).map(span => span.textContent.toLowerCase().replace('#', ''));
+      if (tag === "all" || tags.includes(tag.toLowerCase())) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+
+    // Update active button
+    document.querySelectorAll(".tag-btn").forEach(btn => {
+      btn.classList.remove("active");
+      if (btn.getAttribute("data-tag") === tag) {
+        btn.classList.add("active");
+      }
+    });
+  }
+
+  // Attach event listeners
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".tag-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const tag = btn.getAttribute("data-tag");
+        filterByTag(tag);
+      });
+    });
+  });
+</script>
+
+
+<script src="/js/rock.js"></script>
+</body>
+</html>

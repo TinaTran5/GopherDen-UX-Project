@@ -1,0 +1,124 @@
+body {
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 40px;
+    position: relative;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    /*justify-content: center;*/
+    gap: 20px;
+    margin: 0 60px 40px 60px;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    background-color: #ccc;
+    border-radius: 50%;
+    border: 5px solid black;
+}
+
+.info h2 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.info p {
+    margin: 5px 0;
+}
+
+h2 {
+    text-align: center;
+}
+.profile-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
+.favorites {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.favorite-box {
+    width: 140px;
+    height: 100px;
+    background-color: #ddd;
+    border-radius: 4px;
+}
+
+.favorite-box.selected {
+    border: 2px solid #3377ff;
+}
+
+
+
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.video-card {
+    flex: 1 1 300px;
+    max-width: 400px;
+}
+
+.video-frame {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.video-frame:hover {
+    transform: scale(1.02);
+}
+
+.video-frame iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+}
+
+.video-description {
+    padding: 15px;
+    border-top: 1px solid #eee;
+    background-color: #fdfdfd;
+}
+
+.video-description p {
+    margin: 0 0 10px;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-start;
+}
+
+.tags span {
+    background-color: #e6f2ff;
+    color: #005f99;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    border-radius: 20px;
+}
+

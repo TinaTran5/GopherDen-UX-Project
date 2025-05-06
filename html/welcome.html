@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="../css/welcome.css">
+    <link rel="stylesheet" href="../css/layout.css">
+</head>
+<body>
+<nav>
+    <div class="left">
+        <p onclick="location.href='welcome.html'">GopherDen</p>
+    </div>
+    <div class="right">
+        <a href="../html/welcome.html">Home</a>
+        <a href="../html/browse.html">Browse</a>
+        <a href="../html/about.html">About</a>
+        <a href="../html/umnspaces.html">UMN Spaces</a>
+        <img src="/img/profile.png" alt="profile" onclick="location.href='profile.html'">
+    </div>
+</nav>
+<section class="welcome">
+    <div class="bg-image"></div>
+    <div class="container">
+        <div class="icons">
+            <img class="icon brightness" src="/img/brightness.png" alt="brightness">
+            <img class="icon sound" id="volume-icon" src="/img/sound-off.svg" alt="sound-off">
+        </div>
+        <div class="top">
+            <h2>Welcome! Choose a stone</h2>
+        </div>
+        <div class="selection-box">
+            <div class="stone-select">
+                <div class="arrow left">
+                    <img src="/img/arrow.webp" alt="left-arrow">
+                </div>
+                <div class="stone">
+                    <img id="rock-img" src="../img/stone1.png" alt="stone1">
+                </div>
+                <div class="arrow right">
+                    <img class="right-arrow" src="/img/arrow.webp" alt="right-arrow">
+                </div>
+            </div>
+
+            <p>Here, you're a stone.</p>
+            <p>No worries about being people</p>
+            <button class="start" onclick="location.href='emotion.html'">Start</button>
+        </div>
+    </div>
+</section>
+
+<script src="/js/welcome.js"></script>
+<script src="/js/rock.js"></script>
+</body>
+</html>

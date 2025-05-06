@@ -1,0 +1,31 @@
+body {
+    /*background: url("/img/nature.png");*/
+    /*background-size: cover;*/
+    position: relative;
+    z-index: 1;
+}
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.6; /* Optional: makes content more readable */
+}
+
+.tools {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.video {
+    p {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window</title>
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/window.css">
+</head>
+<body>
+<nav>
+    <div class="left">
+        <p onclick="location.href='welcome.html'">GopherDen</p>
+    </div>
+    <div class="right">
+        <a href="welcome.html">Home</a>
+        <a href="browse.html">Browse</a>
+        <a href="about.html">About</a>
+        <a href="umnspaces.html">UMN Spaces</a>
+        <img src="/img/profile.png" alt="profile" onclick="location.href='profile.html'">
+    </div>
+</nav>
+<section class="video">
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="/videos/snow.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p>"Video Title"</p>
+    <div class="tools">
+        <img>
+    </div>
+</section>
+<div id="rock-bubble">
+    <img id="persistent-rock" alt="Your rock" />
+    <div class="talk-bubble tri-right round btm-left-in">
+    </div>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const rockImg = localStorage.getItem("selectedRock");
+            if (rockImg) {
+                const rockDisplay = document.getElementById("persistent-rock");
+                rockDisplay.src = rockImg;
+            }
+        });
+    </script>
+    <script src="/js/welcome.js"></script>
+</body>
+</html>

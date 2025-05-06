@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'MelonCamp';
+    src: url('/fonts/MelonCamp.ttf') format('truetype');
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /*background-color: #69585f;*/
+    font-family: 'MelonCamp', sans-serif;
+    background: url("/img/nature.png");
+    background-size: cover;
+    overflow: hidden;
+}
+
+.welcome {
+    /*border: 1px solid red;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+
+
+
+    .container {
+        background-color: #ddd;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0,0,0,1);
+        width: 700px;
+        max-width: 80%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+
+        .icons {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            .icon {
+                /*border: 1px solid red;*/
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 30px;
+                height: auto;
+                cursor: pointer;
+            }
+        }
+
+        .top {
+            background-color: #A1E3F9;
+            h2 {
+                margin: 15px;
+                color: black;
+                text-align: center;
+            }
+
+        }
+
+        div.selection-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: white;
+
+            .stone-select {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                margin: 20px 0;
+
+                div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0;
+
+                    &.left {
+                       transform: scaleX(-1);
+
+                    }
+
+                    &.arrow {
+                        padding: 0;
+                        margin: 0;
+                        width: 200px;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+
+                    img {
+                        width: 60%;
+                    }
+                }
+            }
+
+
+            p {
+                margin: 0;
+                font-size: 1.5em;
+            }
+            button {
+                font-family: 'MelonCamp', sans-serif;
+                font-size: 1.2rem;
+                margin: 20px;
+                border: none;
+                padding: 10px 50px;
+                border-radius: 20px;
+                background-color: limegreen;;
+                color: white;
+                cursor: pointer;
+                text-transform: uppercase;
+            }
+
+        }
+    }
+}

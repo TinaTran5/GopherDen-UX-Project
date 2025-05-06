@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotions</title>
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/emotion.css">
+</head>
+<body>
+<nav>
+    <div class="left">
+        <p onclick="location.href='welcome.html'">GopherDen</p>
+    </div>
+    <div class="right">
+        <a href="../html/welcome.html">Home</a>
+        <a href="../html/browse.html">Browse</a>
+        <a href="../html/about.html">About</a>
+        <a href="../html/umnspaces.html">UMN Spaces</a>
+        <img src="/img/profile.png" alt="profile" onclick="location.href='profile.html'">
+    </div>
+</nav>
+<section class="emotion">
+    <div class="container">
+        <div class="icons">
+            <img class="icon brightness" src="/img/brightness.png" alt="brightness" />
+            <img class="icon sound" id="volume-icon" src="/img/sound-off.svg" alt="sound-off" />
+        </div>
+        <div class="top">
+            <img src="/img/calendar.webp" alt="Calendar" width="30px" height="30px" />
+            <p>Today, April 19, 10:11 PM</p>
+        </div>
+
+        <div class="btm-container">
+            <h1>How are you feeling today?</h1>
+            <div class="mood-row">
+                <img class="emojis" src="/img/emotions/super-sad.png" alt="super-sad">
+                <img class="emojis" src="/img/emotions/sad.png" alt="Sad">
+                <img class="emojis" src="/img/emotions/ok.png" alt="ok">
+                <img class="emojis" src="/img/emotions/happy.png" alt="happy">
+                <img class="emojis" src="/img/emotions/super-happy.png" alt="super-happy">
+            </div>
+        </div>
+    </div>
+</section>
+<div id="rock-bubble">
+    <img id="persistent-rock" alt="Your rock" />
+    <div class="talk-bubble tri-right round btm-left-in">
+        <div class="text">
+            <p>You rock!</p>
+        </div>
+    </div>
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+        const rockImg = localStorage.getItem("selectedRock");
+        if (rockImg) {
+            const rockDisplay = document.getElementById("persistent-rock");
+            rockDisplay.src = rockImg;
+        }
+    });
+</script>
+<script src="/js/welcome.js"></script>
+</body>
+</html>
