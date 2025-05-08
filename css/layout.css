@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'MelonCamp';
-    src: url('fonts/MelonCamp.ttf') format('truetype');
+    src: url('../fonts/MelonCamp.ttf') format('truetype');
 }
 
 html, body {
