@@ -1,6 +1,6 @@
 const rockImages = [
-    "/img/stone1.png",
-    "/img/stone2.png",
+    "img/stone1.png",
+    "img/stone2.png",
 ];
 let currentIndex = 0;
 
@@ -35,7 +35,7 @@ let isMuted = true;
 volumeIcon.addEventListener('click', () => {
     isMuted = !isMuted;
     if (isMuted) {
-        volumeIcon.src = '/img/sound-off.svg';
+        volumeIcon.src = 'img/sound-off.svg';
         volumeIcon.alt = 'muted';
         audioElement.pause();
 
@@ -43,7 +43,7 @@ volumeIcon.addEventListener('click', () => {
         // Optional: mute audio here if you have one
         // audioElement.muted = true;
     } else {
-        volumeIcon.src = '/img/sound-on.svg';
+        volumeIcon.src = 'img/sound-on.svg';
         volumeIcon.alt = 'volume';
         audioElement.volume = 0.5;
         audioElement.play();
