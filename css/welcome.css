@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'MelonCamp';
-    src: url('/fonts/MelonCamp.ttf') format('truetype');
+    src: url('fonts/MelonCamp.ttf') format('truetype');
 }
 
 body {
@@ -9,7 +9,7 @@ body {
     padding: 0;
     /*background-color: #69585f;*/
     font-family: 'MelonCamp', sans-serif;
-    background: url("/img/nature.png");
+    background: url("img/nature.png");
     background-size: cover;
     overflow: hidden;
 }
