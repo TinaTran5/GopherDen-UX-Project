@@ -6,6 +6,7 @@
     <title>Browse</title>
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/browse.css">
+    <link rel="icon" type="image/x-icon" href="/img/stone1.png">
 </head>
 <body>
 <nav>
@@ -16,7 +17,8 @@
         <a href="../html/welcome.html">Home</a>
         <a href="../html/browse.html">Browse</a>
         <a href="../html/about.html">About</a>
-        <a href="../html/umnspaces.html">UMN Spaces</a>
+        <a href="window.html">Window</a>
+      <!--        <a href="../html/umnspaces.html">UMN Spaces</a>-->
         <img src="/img/profile.png" alt="profile" onclick="location.href='profile.html'">
     </div>
 </nav>
@@ -100,27 +102,18 @@
 
       <div class="video-card">
         <div class="video-frame">
-          <iframe src="https://www.youtube.com/embed/_qoh9g29ib8?si=hTfTF__DefKEOrmX" title="Summer Beach Jazz" allowfullscreen></iframe>
+          <iframe
+                  src="https://www.youtube.com/embed/l7_1aQpQTCE?si=KBz2dVK7l9ccwD_3"
+                  title="Cafe in the Forest - Heavy Rain"
+                  allowfullscreen>
+          </iframe>
           <div class="video-description">
-            <p>Relaxing summer beach vibes with smooth jazz. Ideal for mellow afternoons or calming study sessions.</p>
+            <p>Cafe nestled in a forest during a heavy rainstorm. Perfect for cozy focus, reading, or relaxing background ambiance.</p>
             <div class="tags">
-              <span>#Summer</span>
-              <span>#Beach</span>
-              <span>#Jazz</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="video-card">
-        <div class="video-frame">
-          <iframe src="https://www.youtube.com/embed/g2Ytq8atf70?si=xaRSm96X_3GWUe-9" title="Halloween Rain Fireplace" allowfullscreen></iframe>
-          <div class="video-description">
-            <p>Spooky yet cozy Halloween ambiance with rain and fireplace sounds. Perfect for chilly nights or themed focus time.</p>
-            <div class="tags">
-              <span>#Halloween</span>
+              <span>#Cafe</span>
+              <span>#Forest</span>
               <span>#Rain</span>
-              <span>#Fireplace</span>
+              <span>#Ambience</span>
             </div>
           </div>
         </div>
@@ -128,14 +121,37 @@
 
       <div class="video-card">
         <div class="video-frame">
-          <iframe src="https://www.youtube.com/embed/oWWO0fq7w6w?si=-sshqEIh4kc0yqKk" title="Spring Nature at Night" allowfullscreen></iframe>
+          <iframe
+                  src="https://www.youtube.com/embed/pUKRtSUrg64"
+                  title="Princess Palace Bedroom Ambience"
+                  allowfullscreen>
+          </iframe>
           <div class="video-description">
-            <p>Peaceful spring blossoms swaying under a starry night sky. Perfect for winding down, dreaming, or quiet reflection.</p>
+            <p>Feel like royalty as you drift off in a classic palace bedroom setting. This peaceful ambience is perfect for sleeping, reading, or daydreaming in elegance.</p>
             <div class="tags">
-              <span>#Nature</span>
-              <span>#Spring</span>
-              <span>#Night</span>
-              <span>#Stars</span>
+              <span>#Princess</span>
+              <span>#Palace</span>
+              <span>#Sleep</span>
+              <span>#Ambience</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-frame">
+          <iframe
+                  src="https://www.youtube.com/embed/6toYzO9spWE"
+                  title="Christmas Fireplace Music Ambience"
+                  allowfullscreen>
+          </iframe>
+          <div class="video-description">
+            <p>Relax to the soothing crackle of a fireplace and gentle instrumental Christmas music. A warm and festive background for studying, sleeping, or enjoying holiday cheer.</p>
+            <div class="tags">
+              <span>#Christmas</span>
+              <span>#Fireplace</span>
+              <span>#Instrumental</span>
+              <span>#Cozy</span>
             </div>
           </div>
         </div>
@@ -177,7 +193,19 @@
   });
 </script>
 
-
+<div id="rock-bubble">
+  <img id="persistent-rock" alt="Your rock" />
+  <div class="talk-bubble tri-right round btm-left-in">
+  </div>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const rockImg = localStorage.getItem("selectedRock");
+      if (rockImg) {
+        const rockDisplay = document.getElementById("persistent-rock");
+        rockDisplay.src = rockImg;
+      }
+    });
+  </script>
 <script src="/js/rock.js"></script>
 </body>
 </html>

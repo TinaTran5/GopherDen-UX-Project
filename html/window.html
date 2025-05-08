@@ -6,6 +6,7 @@
     <title>Window</title>
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/window.css">
+    <link rel="icon" type="image/x-icon" href="/img/stone1.png">
 </head>
 <body>
 <nav>
@@ -16,22 +17,34 @@
         <a href="welcome.html">Home</a>
         <a href="browse.html">Browse</a>
         <a href="about.html">About</a>
-        <a href="umnspaces.html">UMN Spaces</a>
+        <a href="window.html">Window</a>
         <img src="/img/profile.png" alt="profile" onclick="location.href='profile.html'">
     </div>
 </nav>
 <section class="video">
-    <video autoplay muted loop playsinline id="bg-video">
-        <source src="/videos/snow.mp4" type="video/mp4">
+    <video id="bg-video" autoplay muted loop playsinline>
+        <source src="/videos/snow.mp4" type="video/mp4" />
         Your browser does not support the video tag.
     </video>
-    <p>"Video Title"</p>
-    <div class="tools">
+    <div class="video-controls">
+        <button onclick="prevVideo()">◀</button>
+        <p>"Video Title"</p>
+        <button onclick="nextVideo()">▶</button>
+    </div>
+
+    <div class="sidebar">
+        <button class="sidebar-btn"><img src="/img/sound-off.svg" alt="Sound"></button>
+        <button class="sidebar-btn"><img src="/img/brightness.png" alt="brightness"></button>
+        <button class="sidebar-btn"><img src="/img/heart.svg" alt="favorite"></button>
+        <button class="sidebar-btn"><img src="/img/timer.svg" alt="Time"></button>
     </div>
 </section>
 <div id="rock-bubble">
     <img id="persistent-rock" alt="Your rock" />
     <div class="talk-bubble tri-right round btm-left-in">
+        <div class="text">
+            <p>Breathe in, breathe out</p>
+        </div>
     </div>
     <script>
         window.addEventListener("DOMContentLoaded", () => {
@@ -43,6 +56,32 @@
         });
     </script>
     <script src="/js/welcome.js"></script>
+    <script>
+        const videos = [
+            "/videos/snow.mp4",
+            "/videos/background.mp4"
+        ];
+
+        let currentIndex = 0;
+
+        function loadVideo(index) {
+            const videoElement = document.getElementById("bg-video");
+            videoElement.pause();
+            videoElement.querySelector("source").src = videos[index];
+            videoElement.load();
+            videoElement.play();
+        }
+
+        function nextVideo() {
+            currentIndex = (currentIndex + 1) % videos.length;
+            loadVideo(currentIndex);
+        }
+
+        function prevVideo() {
+            currentIndex = (currentIndex - 1 + videos.length) % videos.length;
+            loadVideo(currentIndex);
+        }
+    </script>
 </div>
 </body>
 </html>

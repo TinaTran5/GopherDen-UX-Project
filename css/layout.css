@@ -75,8 +75,10 @@ nav {
 
 
 #persistent-rock {
-    width: 150px; /* adjust size as needed */
+    width: 125px; /* adjust size as needed */
     height: auto;
     -webkit-filter: drop-shadow(2px 2px 4px #1E1E1E);
     filter: drop-shadow(2px 2px 4px #1E1E1E);
 }
+
+

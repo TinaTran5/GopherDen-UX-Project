@@ -28,6 +28,7 @@ document.querySelector('.brightness').addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
 });
 
+const audioElement = document.getElementById('background-audio');
 const volumeIcon = document.getElementById('volume-icon');
 let isMuted = true;
 
@@ -36,11 +37,16 @@ volumeIcon.addEventListener('click', () => {
     if (isMuted) {
         volumeIcon.src = '/img/sound-off.svg';
         volumeIcon.alt = 'muted';
+        audioElement.pause();
+
+
         // Optional: mute audio here if you have one
         // audioElement.muted = true;
     } else {
         volumeIcon.src = '/img/sound-on.svg';
         volumeIcon.alt = 'volume';
-        // audioElement.muted = false;
+        audioElement.volume = 0.5;
+        audioElement.play();
+
     }
 });
